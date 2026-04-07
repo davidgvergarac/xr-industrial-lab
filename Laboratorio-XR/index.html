@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://cdn.jsdelivr.net/npm/aframe@1.4.1/dist/aframe-master.min.js"></script>
+  </head>
+  <body>
+    <a-scene>
+      
+      <a-assets>
+        <a-asset-item id="modeloGrua" src="models/grua1.glb"></a-asset-item>
+        
+        <a-asset-item id="modeloTrabajador" src="009_Male_Worker_Welder_00.glb"></a-asset-item>
+      </a-assets>
+
+      <a-plane rotation="-90 0 0" width="20" height="20" color="#707070"></a-plane>
+
+      <a-entity 
+        gltf-model="#modeloGrua" 
+        position="2 0 -5" 
+        scale="0.01 0.01 0.01" 
+        rotation="0 -45 0">
+      </a-entity>
+
+      <a-entity 
+        gltf-model="#modeloTrabajador" 
+        position="1 0 -4" 
+        scale="2 2 2" 
+        rotation="0 0 0">
+      </a-entity>
+
+      <a-light type="ambient" color="#FFFFFF" intensity="0.6"></a-light>
+      <a-light type="directional" color="#FFFFFF" intensity="0.8" position="-1 4 2"></a-light>
+
+      <a-sky color="#87CEEB"></a-sky> <a-entity position="0 1.6 0">
+        <a-camera></a-camera>
+      </a-entity>
+
+    </a-scene>
+  </body>
+</html>
